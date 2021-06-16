@@ -14,10 +14,6 @@ terraform {
     google-beta = {
       source = "hashicorp/google-beta"
     }
-    cloudflare = {
-      source = "cloudflare/cloudflare"
-      version = "~> 2.0"
-    }
   }
 }
 
@@ -29,10 +25,4 @@ provider "google" {
 provider "google-beta" {
   project = var.project_name
   region  = var.region
-}
-
-
-provider "cloudflare" {
-  email   = var.cf_email
-  api_key = var.cf_api_key
 }
